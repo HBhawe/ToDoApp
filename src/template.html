@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do list</title>
+  </head>
+  <body>
+    <header>
+      <h1>ToDo list</h1>
+    </header>
+    <button class="clear">Clear local storage and reload</button>
+    <dialog id="projectModal">
+      <form action="" id="projectName">
+        <label for="projectName">Project Name:</label>
+        <input
+          name="projectName"
+          type="text"
+          required
+          pattern="[a-zA-Z]+"
+          oninvalid="setCustomValidity('Please enter alphabets only. ')"
+          title="Only alphabets allowed"
+          placeholder="Only alphabets allowed"
+        />
+        <button type="submit" class="submit">Save</button>
+        <button type="reset" class="cancel-modal">Cancel</button>
+      </form>
+    </dialog>
+    <div><button class="modal-project">New project</button></div>
+    <div id="content">
+      <div class="hidden project">
+        <h3></h3>
+        <button class="new-to-do" data-project="hidden">New To Do</button>
+        <ul class="to-do-list"></ul>
+      </div>
+    </div>
+  </body>
+</html>
